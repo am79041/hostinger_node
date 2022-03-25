@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+body {
+  background-color: rgb(252, 252, 252);
+  font-family: "Poppins", sans-serif;
+}
+#footer {
+  background-color: #343a40;
+  padding: 1rem 0 1rem 0;
+}
+#content {
+  margin: 2rem 0 0 0;
+  padding: 3rem 10rem 3rem 10rem;
+  background-color: rgb(218, 218, 218);
+}
+#footer a {
+  text-decoration: none;
+  color: wheat;
+}
+#footer a:hover {
+  color: white;
+}
+#Copyright {
+  color: wheat;
+}
+h3 {
+  font-size: 1.4rem;
+}
+h4 {
+  font-size: 1rem;
+}
+span {
+  font-size: 1rem;
+  font-weight: 600;
+}
+#wrapper {
+  margin-top: 8%;
+  padding-right: 3rem;
+  padding-left: 3rem;
+}
+#icons:active {
+  color: black;
+}
+#clear {
+  font-size: 1.5rem;
+}
+#searchVideos {
+  width: 100%;
+}
+#input {
+  width: 100%;
+  padding: 0.8rem;
+}
+#dArea {
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+#mytable {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+#mytable ::after {
+  gap: 1rem;
+}
+
+td {
+  padding-top: 10px;
+}
+#row {
+  margin-bottom: 1rem;
+}
+#spinner {
+  display: none;
+  width: 5%;
+  margin: auto;
+}
+#displaySpinner {
+  display: block;
+}
+#removeSpinner {
+  display: none;
+}
+#renderMedia {
+  height: 550;
+  width: 520;
+}
+@media (max-width: 767px) {
+  #title {
+    font-size: 1.8rem;
+  }
+  #wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 12%;
+  }
+  #content {
+    margin: 2rem 0 0 0;
+    padding: 3rem 2rem 3rem 2rem;
+  }
+  #mytable {
+    width: 80%;
+  }
+  #spinner {
+    width: 10%;
+  }
+  #renderMedia {
+    height: 400;
+    width: 300;
+  }
+}
