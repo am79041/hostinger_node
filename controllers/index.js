@@ -64,9 +64,9 @@ const getVideo = async () => {
   const key = "video";
   try {
     const obj = await getData({ link: link, key: key });
-    getSingle({ data: obj.data, key: key });
+    obj.data && getSingle({ data: obj.data, key: key });
   } catch (error) {
-    console.log(error);
+    console.log("NaN");
   }
 };
 
@@ -78,7 +78,7 @@ const getDP = async () => {
       link: link,
       key: "dp",
     });
-    getSingle({ data: obj.data, key: "image" });
+    obj.data && getSingle({ data: obj.data, key: "image" });
   } catch (error) {
     console.log("NaN");
   }
@@ -89,19 +89,23 @@ const getImage = async () => {
   const key = "image";
   try {
     const obj = await getData({ link: link, key: key });
-    getSingle({ data: obj.data, key: key });
+    obj.data && getSingle({ data: obj.data, key: key });
   } catch (error) {
-    console.log(error);
+    console.log("NaN");
   }
 };
 
 const getCarousel = async () => {
   const link = getInput();
   const key = "carousels";
-  const ar = await getData({ link: link, key: key });
-  ar.map((e) => {
-    return getSingle({ data: e.data, key: "image" });
-  });
+  try {
+    const ar = await getData({ link: link, key: key });
+    ar.map((e) => {
+      return e.data && getSingle({ data: e.data, key: "image" });
+    });
+  } catch (error) {
+    console.log("NaN");
+  }
 };
 
 const getData = async ({ link, key }) => {
@@ -109,16 +113,22 @@ const getData = async ({ link, key }) => {
   errMsg.innerText = "";
   document.getElementById("spinner").style = "display:block";
   clearInput();
-
-  const response = await axios.post("../action.php", {
-    url: link,
-    key: key,
-  });
-
-  if (response.data == "404! Url Not Found") {
-    document.getElementById("spinner").style = "display:none";
-    errMsg.innerText = "Please Check Your URL Once Or Try again later...";
-  } else return response.data;
+  try {
+    const response = await axios.post("../action.php", {
+      url: link,
+      key: key,
+    });
+    console.log(response.data);
+    if (response.data && response.data !== "404! Url Not Found")
+      return response.data;
+    else {
+      document.getElementById("spinner").style = "display:none";
+      errMsg.innerText = "Please Check Your URL Once Or Try again later...";
+      return null;
+    }
+  } catch (error) {
+    console.log("NaN");
+  }
 };
 
 const randomTxt = document.querySelector("#randomText");

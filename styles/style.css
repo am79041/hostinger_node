@@ -82,7 +82,7 @@ td {
 }
 #renderMedia {
   height: 550;
-  width: 520;
+  width: 450;
 }
 @media (max-width: 767px) {
   #title {
