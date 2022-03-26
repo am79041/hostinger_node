@@ -1,68 +1,10 @@
-<html lang="en">
-
-<head>
-<?php header("cache-control:public, max-age=0, must-revalidate") ?>
-
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content = "Best2Buy is minified IG Downloader tool, allows you save IG contents locally accros all devices instantly. Don't need to sign up or download any app, just paste the url here &amp download.">
-    <title>Best2Buy-Privacy Policy</title>
-    <meta property = "og:title" content="Best2Buy-A Minified IG Downloader">
-    <meta property = "og:type" content = "article"/>
-    <meta property = "og:image" alt="best2buy" content = "https://www.dropbox.com/s/p07u2qzwowbh3hy/best2buy.png?dl=0" />
-    <meta property = "og:url" content = "https://best2buy.in"/>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-193960761-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-193960761-1');
-    </script>
-
-    <!-- CSS only -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="../styles/style.css">
+<?php require_once('header.php') ?>
+        <title>Best2Buy-Privacy Policy</title>
+        <meta name="description" content = "Best2Buy is minified IG Downloader tool, allows you save IG contents locally accros all devices instantly. Don't need to sign up or download any app, just paste the url here &amp download.">
 </head>
 
 <body>
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-        <!-- Brand -->
-        <a class="navbar-brand" href="./index.php">Best2Buy</a>
-
-
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <!-- Navbar links -->
-        <div class="collapse navbar-collapse ml-sm-5" id="collapsibleNavbar">
-            <ul class="navbar-nav flex flex-row justify-content-around">
-                <li class="nav-item">
-                    <a class="nav-link" href="./index.php">Reels</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./images.php">Photos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./dp.php">DP</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./carousel.php">Carousel</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./igtv.php">IGTV</a>
-                </li>
-                </li>
-            </ul>
-        </div>
-    </nav>
+   <?php require_once('navbar.php') ?>
 <div class="container px-5 text-break mt-5 mb-5">
 
     <h3>Privacy Policy for Best2Buy</h3>
@@ -158,4 +100,4 @@
 
 </div>
 
-<?php require('../Loaders/footer.php') ?>
+<?php require_once('../Loaders/footer.php') ?>
